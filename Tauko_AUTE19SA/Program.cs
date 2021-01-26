@@ -10,13 +10,28 @@ namespace Tauko_AUTE19SA
     {
         static void Main(string[] args)
         {
-            Kahvitauko kt1 = new Kahvitauko();
-            kt1.aseta_alkuaika(//parametriksi DateTime luokan olio);
-            kt1.aseta_loppuaika();
-            Ruokatauko rt = new Ruokatauko();
-            Kahvitauko kt2 = new Kahvitauko();
+            DateTime dt = new DateTime(2016, 12, 31, 5, 10, 20); // 15min coffee break
+            DateTime dt2 = new DateTime(2016, 12, 31, 5, 25, 20);
 
-            Console.WriteLine("työpäivässä on taukoa yhteensä 60 minuuttia")
+            DateTime dt3 = new DateTime(2016, 12, 31, 5, 10, 20); // 30min lunch break
+            DateTime dt4 = new DateTime(2016, 12, 31, 5, 40, 20);
+
+            Kahvitauko kt1 = new Kahvitauko();
+            kt1.aseta_alkuaika(dt); //parametriksi DateTime luokan olio
+            kt1.aseta_loppuaika(dt2);
+
+            Ruokatauko rt = new Ruokatauko();
+            rt.aseta_alkuaika(dt3);
+            rt.aseta_loppuaika(dt4);
+
+            Kahvitauko kt2 = new Kahvitauko();
+            kt2.aseta_alkuaika(dt);
+            kt2.aseta_loppuaika(dt2);
+
+            int total = kt1.Tauonpituus() + kt2.Tauonpituus() + rt.Tauonpituus();
+            Console.WriteLine("Total time spend on break today was: " + total + " minutes");
+
+            Console.ReadKey();
         }
     }
 }

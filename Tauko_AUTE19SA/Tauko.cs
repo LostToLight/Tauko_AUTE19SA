@@ -9,15 +9,21 @@ namespace Tauko_AUTE19SA
     {
         private DateTime alkuaika;
         private DateTime loppuaika;
+        private TimeSpan kokonaispituus;
 
 
         public void aseta_alkuaika(DateTime l)
         {
-            
+            alkuaika = l;
         }
         public void aseta_loppuaika(DateTime l)
         {
-
+            loppuaika = l;
+        }
+        public TimeSpan Kokonaispituus()
+        {
+            kokonaispituus = loppuaika - alkuaika;
+            return kokonaispituus;
         }
 
     }

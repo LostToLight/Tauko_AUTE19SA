@@ -9,7 +9,8 @@ namespace Tauko_AUTE19SA
     {
        public int Tauonpituus()
         {
-            return 0;
+            int tauonpituus = (int)this.Kokonaispituus().TotalMinutes;
+            return tauonpituus;
         }
     }
 }
