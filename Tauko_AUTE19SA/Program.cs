@@ -28,6 +28,8 @@ namespace Tauko_AUTE19SA
             kt2.aseta_alkuaika(dt);
             kt2.aseta_loppuaika(dt2);
 
+            // Tässä ynnätään vain yhteen tauot. Tauon pituus saadaan olion
+            // Tauonpituus() metodilta, minkä se on vannonut toteuttaa IAika rajapinnan vuoksi
             int total = kt1.Tauonpituus() + kt2.Tauonpituus() + rt.Tauonpituus();
             Console.WriteLine("Total time spend on break today was: " + total + " minutes");
 

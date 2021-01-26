@@ -10,7 +10,7 @@ namespace Tauko_AUTE19SA
         private DateTime alkuaika;
         private DateTime loppuaika;
         private TimeSpan kokonaispituus;
-
+        int t = 0;
 
         public void aseta_alkuaika(DateTime l)
         {
@@ -25,6 +25,5 @@ namespace Tauko_AUTE19SA
             kokonaispituus = loppuaika - alkuaika;
             return kokonaispituus;
         }
-
     }
 }
